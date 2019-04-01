@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="204ef305-cbb5-4aed-a032-d70509dcc071" name="Default Changelist" comment="" />
+    <list default="true" id="204ef305-cbb5-4aed-a032-d70509dcc071" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/arcsoft_all/test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.png" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,11 +92,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/arcsoft_all/test.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
@@ -229,6 +227,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PycharmProjects\face_recognition_test" />
       <recent name="E:\PycharmProjects\face_recognition_test\arcsoft_all" />
       <recent name="E:\PycharmProjects\face_recognition_test\arcsoft" />
     </key>
@@ -364,7 +363,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49882904" visible="true" weight="0.26096824" />
       <window_info id="Structure" order="1" sideWeight="0.50117093" side_tool="true" weight="0.25718608" />
