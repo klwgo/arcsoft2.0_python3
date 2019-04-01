@@ -2,3 +2,4 @@
 虹软2.0加python3解决方案
 
 # 最近一边案例开发一边分享，有兴趣可以资助一下，谢谢
+![](https://github.com/092113219/arcsoft2.0_python3/test.png)
