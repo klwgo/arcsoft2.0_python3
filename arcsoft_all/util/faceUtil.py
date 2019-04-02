@@ -26,7 +26,6 @@ def loadImage(image):
     img = cv2.imread(image.filePath)
     sp = img.shape
     img = cv2.resize(img, (sp[1] // 4 * 4, sp[0] // 4 * 4))
-    # cv2.imwrite('ttt.jpg', img)
     sp = img.shape
     image.data = img
     image.width = sp[1]
