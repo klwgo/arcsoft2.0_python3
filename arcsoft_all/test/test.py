@@ -23,6 +23,7 @@ if res == 0 or res == 90114:
     print("激活成功！", res)
 else:
     print("激活失败！", res)
+
 # 0xFFFFFFFF, 0x1, 16, 50, 5, byref(Handle))
 res, faceEngine = faceUtil.asfInitEngine(0xFFFFFFFF, 0x5, 16, 50, 61)
 if res == 0:

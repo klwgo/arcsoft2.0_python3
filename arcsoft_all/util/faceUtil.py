@@ -6,6 +6,7 @@
 from arcsoft_all.lib import face_dll, face_detect_sdk, face_property_sdk
 from ctypes import *
 import cv2
+import numpy as np
 
 handle = c_void_p()
 c_ubyte_p = POINTER(c_ubyte)
@@ -23,7 +24,10 @@ class IM:
 
 # 图片加载
 def loadImage(image):
-    img = cv2.imread(image.filePath)
+    # img = cv2.imread(image.filePath)
+    # print(img)
+    # 解決中文問題
+    img = cv2.imdecode(np.fromfile(image.filePath, dtype=np.uint8), -1)
     sp = img.shape
     img = cv2.resize(img, (sp[1] // 4 * 4, sp[0] // 4 * 4))
     sp = img.shape
@@ -88,7 +92,7 @@ def asfFaceFeatureExtract(image, format, face):
         # print('提取特征成功:',detectedFaces.featureSize,mem)
         return res, retz
     else:
-        return res
+        return res, None
 
 # 人脸匹配
 def asfFaceFeatureCompare(feature1, feature2):
@@ -153,5 +157,5 @@ def getSingleFaceInfo(faces, index):
     face.faceRect.top = faces.faceRect[index].top
     face.faceRect.bottom = faces.faceRect[index].bottom
     face.faceOrient = faces.faceOrient[index]
-    print(face.faceRect, face.faceRect.left, face.faceRect.right, face.faceRect.top, face.faceRect.bottom,face.faceOrient)
+    print(face.faceRect, face.faceRect.left, face.faceRect.right, face.faceRect.top, face.faceRect.bottom, face.faceOrient)
     return face
