@@ -92,13 +92,14 @@ def getFacesProperty(path):
         print(error.BaseException(img.filePath + '人脸检测失败：' + configUtil.getValue('error_code', str(res))))
 
 #     res, score = faceUtil.asfFaceFeatureCompare(res1[1], res2[1])
+
 # 測試
 def test():
     activation()
     initEngine()
     retzs = loadFaceDatebase("E:/PycharmProjects/face_recognition_test/img/dataset")
     retz = getFacesRET("E:/PycharmProjects/face_recognition_test/img/input/aaa.jpeg")
-    print(retz,'---')
+    print(retz, '---')
     if len(retz) > 0:
         for i in list(retz.keys()):
             if len(retzs) > 0:
@@ -110,75 +111,15 @@ def test():
     else:
         print('==============')
 
-# test()
-
 def test1():
     activation()
     initEngine()
     getFacesProperty("E:/PycharmProjects/face_recognition_test/img/input/aaa.jpeg")
 
+# test()
 test1()
-# APP_ID = b'4fEUb81MxFozpgncw2k8a7ZAEArfvNGZjvvo8jZDLgkn'
-# SDK_KEY = b'7ewepBAnhYgQdsGyJ9aqDchQ9aZGy8U8sYdHMHehx9ps'
-#
-# # Appkey = b'4fEUb81MxFozpgncw2k8a7ZAEArfvNGZjvvo8jZDLgkn'
-# # SDKey = b'7ewepBAnhYgQdsGyJ9aqDchQ9aZGy8U8sYdHMHehx9ps'
-#
-# img1 = faceUtil.IM()
-# img2 = faceUtil.IM()
-#
-# img1.filePath = 'E:/PycharmProjects/face_recognition_test/arcsoft_all/3.jpg'
-# img2.filePath = 'E:/PycharmProjects/face_recognition_test/arcsoft_all/6.jpg'
-#
-# # 激活设备
-# res = faceUtil.asfActivation(APP_ID, SDK_KEY)
-# if res == 0 or res == 90114:
-#     print("激活成功！", res)
-# else:
-#     print("激活失败！", res)
-#
-# # 0xFFFFFFFF, 0x1, 16, 50, 5, byref(Handle))
-# res, faceEngine = faceUtil.asfInitEngine(0xFFFFFFFF, 0x5, 16, 50, 61)
-# if res == 0:
-#     print("初始化成功！", res)
-# else:
-#     print("初始化失败！", res)
-#
-# image1 = faceUtil.loadImage(img1)
-# image2 = faceUtil.loadImage(img2)
-#
-# print('image1: ', image1)
-# print('image2: ', image2)
-# # 分开检测以及获取属性
-# def test():
-#     res1, faces1 = faceUtil.asfDetectFaces(image1, 0x201)
-#     if res1 == 0:
-#         print('image1:', res1, faces1.faceNum, faces1.faceRect)
-#     else:
-#         print('image1:', res1)
-#     res1 = faceUtil.asfFaceFeatureExtract(image1, 0x201, faceUtil.getSingleFaceInfo(faces1, 0))
-#     print('image1:', res1)
-#
-#     # 获取人脸属性
-#     # print(1 | 4)
-#     # print(8 | 16 | 32)
-#     res = faceUtil.asfProcess(image1, 0x201, faces1, 56)
-#     print(res)
-#     print(faceUtil.asfGetAge()[1].ageArray[0])
-#     print(faceUtil.asfGetGender()[1].genderArray[0])
-#     print(faceUtil.asfGetFace3DAngle()[1].roll[0])
-#
-#     res2, faces2 = faceUtil.asfDetectFaces(image2, 0x201)
-#     if res2 == 0:
-#         print('image2:', res2, faces2.faceNum, faces2.faceRect)
-#     else:
-#         print('image2:', res2)
-#     res2 = faceUtil.asfFaceFeatureExtract(image2, 0x201, faceUtil.getSingleFaceInfo(faces2, 0))
-#     print('image2:', res2)
-#
-#     # 人脸比对
-#     res, score = faceUtil.asfFaceFeatureCompare(res1[1], res2[1])
-#     print(res, score)
+
+
 
 
 

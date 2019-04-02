@@ -14,8 +14,8 @@ SDK_KEY = b'7ewepBAnhYgQdsGyJ9aqDchQ9aZGy8U8sYdHMHehx9ps'
 img1 = faceUtil.IM()
 img2 = faceUtil.IM()
 
-img1.filePath = 'E:/PycharmProjects/face_recognition_test/arcsoft_all/3.jpg'
-img2.filePath = 'E:/PycharmProjects/face_recognition_test/arcsoft_all/6.jpg'
+# img1.filePath = 'E:/PycharmProjects/face_recognition_test/arcsoft_all/3.jpg'
+# img2.filePath = 'E:/PycharmProjects/face_recognition_test/arcsoft_all/6.jpg'
 
 # 激活设备
 res = faceUtil.asfActivation(APP_ID, SDK_KEY)
