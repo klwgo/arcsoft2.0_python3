@@ -27,7 +27,15 @@ def loadImage(image):
     # img = cv2.imread(image.filePath)
     # print(img)
     # 解決中文問題
-    img = cv2.imdecode(np.fromfile(image.filePath, dtype=np.uint8), -1)
+    # img = cv2.imdecode(np.fromfile(image.filePath, dtype=np.uint8), -1)
+    if str(image.filePath).startswith("http:"): # 暂时做简单判断
+        # 在线读取
+        import requests
+        file = requests.get(image.filePath)
+        img = cv2.imdecode(np.fromstring(file.content, np.uint8), 1)
+    else:
+        # 本地读取
+        img = cv2.imdecode(np.fromfile(image.filePath, dtype=np.uint8), -1)
     sp = img.shape
     img = cv2.resize(img, (sp[1] // 4 * 4, sp[0] // 4 * 4))
     sp = img.shape
