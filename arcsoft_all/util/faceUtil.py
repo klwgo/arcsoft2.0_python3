@@ -13,6 +13,7 @@ c_ubyte_p = POINTER(c_ubyte)
 
 class IM:
     def __init__(self):
+        self.fileName = None
         self.filePath = None
         self.data = None
         self.width = 0
@@ -28,16 +29,21 @@ def loadImage(image):
     # print(img)
     # 解決中文問題
     # img = cv2.imdecode(np.fromfile(image.filePath, dtype=np.uint8), -1)
-    if str(image.filePath).startswith("http:"): # 暂时做简单判断
+    import numpy
+    if type(image.data) is numpy.ndarray:
+        img = image.data
+    elif str(image.filePath).startswith("http:"): # 暂时做简单判断
         # 在线读取
         import requests
         file = requests.get(image.filePath)
         img = cv2.imdecode(np.fromstring(file.content, np.uint8), 1)
+        sp = img.shape
+        img = cv2.resize(img, (sp[1] // 4 * 4, sp[0] // 4 * 4))
     else:
         # 本地读取
         img = cv2.imdecode(np.fromfile(image.filePath, dtype=np.uint8), -1)
-    sp = img.shape
-    img = cv2.resize(img, (sp[1] // 4 * 4, sp[0] // 4 * 4))
+        sp = img.shape
+        img = cv2.resize(img, (sp[1] // 4 * 4, sp[0] // 4 * 4))
     sp = img.shape
     image.data = img
     image.width = sp[1]
@@ -69,7 +75,7 @@ def asfDetectFaces(image, format):
     # imgData [in] 图片数据
     # detectedFaces [out] 检测到的人脸信息
     faces = face_detect_sdk.ASF_MultiFaceInfo()
-    img = image.data
+    # img = image.data
     imgby = bytes(image.data)
     imgcuby = cast(imgby, c_ubyte_p)
     res = face_dll.ASFDetectFaces(handle, image.width, image.height, format, imgcuby, byref(faces))
@@ -89,7 +95,7 @@ def asfFaceFeatureExtract(image, format, face):
     imgby = bytes(image.data)
     # print(img)
     imgcuby = cast(imgby, c_ubyte_p)
-    print(handle, image.width, image.height, format, imgcuby, face, byref(detect))
+    # print(handle, image.width, image.height, format, imgcuby, face, byref(detect))
     res = face_dll.ASFFaceFeatureExtract(handle, image.width, image.height, format, imgcuby, face, byref(detect))
     if res == 0:
         retz = face_detect_sdk.ASF_FaceFeature()
@@ -165,5 +171,5 @@ def getSingleFaceInfo(faces, index):
     face.faceRect.top = faces.faceRect[index].top
     face.faceRect.bottom = faces.faceRect[index].bottom
     face.faceOrient = faces.faceOrient[index]
-    print(face.faceRect, face.faceRect.left, face.faceRect.right, face.faceRect.top, face.faceRect.bottom, face.faceOrient)
+    # print(face.faceRect, face.faceRect.left, face.faceRect.right, face.faceRect.top, face.faceRect.bottom, face.faceOrient)
     return face

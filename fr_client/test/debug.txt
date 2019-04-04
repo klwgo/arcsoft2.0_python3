@@ -1,0 +1,32 @@
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:209: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_open, u'打开文件', bmp_open, shortHelp=u'打开', longHelp=u'打开文件')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:210: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_save, u'保存文件', bmp_save, shortHelp=u'保存', longHelp=u'保存文件')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:212: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_help, u'帮助', bmp_help, shortHelp=u'帮助', longHelp=u'帮助')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:213: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_about, u'关于', bmp_about, shortHelp=u'关于', longHelp=u'关于...')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:209: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_open, u'打开文件', bmp_open, shortHelp=u'打开', longHelp=u'打开文件')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:210: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_save, u'保存文件', bmp_save, shortHelp=u'保存', longHelp=u'保存文件')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:212: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_help, u'帮助', bmp_help, shortHelp=u'帮助', longHelp=u'帮助')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:213: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_about, u'关于', bmp_about, shortHelp=u'关于', longHelp=u'关于...')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:209: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_open, u'打开文件', bmp_open, shortHelp=u'打开', longHelp=u'打开文件')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:210: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_save, u'保存文件', bmp_save, shortHelp=u'保存', longHelp=u'保存文件')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:212: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_help, u'帮助', bmp_help, shortHelp=u'帮助', longHelp=u'帮助')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:213: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_about, u'关于', bmp_about, shortHelp=u'关于', longHelp=u'关于...')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:209: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_open, u'打开文件', bmp_open, shortHelp=u'打开', longHelp=u'打开文件')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:210: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_save, u'保存文件', bmp_save, shortHelp=u'保存', longHelp=u'保存文件')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:212: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_help, u'帮助', bmp_help, shortHelp=u'帮助', longHelp=u'帮助')
+E:/PycharmProjects/face_recognition_test/client/test/guiTest.py:213: wxPyDeprecationWarning: Call to deprecated item. Use :meth:`AddTool` instead.
+  self.tb.AddLabelTool(self.id_about, u'关于', bmp_about, shortHelp=u'关于', longHelp=u'关于...')
